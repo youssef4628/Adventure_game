@@ -107,7 +107,7 @@ def check_puzzle(evil):
             go_room(weapon,evil)
         
 
-# This controls in the second door and movin from or to it
+# This controls in the second door and moving from or to it
 def the_second(weapon,evil):
     senario2 = "You went to the second door and found a difficult puzzle \nthat you have to solve in order to reach what's behind it. \nWhat do you choose: \n1-Solve the puzzle.\n2-Go back to the room "
     write_function(senario2)
