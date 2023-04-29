@@ -6,7 +6,7 @@ import sys
 def write_function(text):
     for char in text:
         print(char, end="", flush=True)
-        time.sleep(.085)
+        time.sleep(.00085)
 
 
 # this the function that control in taking input from user
@@ -82,7 +82,7 @@ def the_first(weapon,evil):
 
 
 # this controls in puzlle and check the answer and the weapon that the user will take if he answered corectly 
-def check_puzzle(evil):
+def check_puzzle(weapon,evil):
     puzzle= "The puzzle is 1+1 = 1 \nSo if 1+0 = ? \nA simple hint, this puzzle depends on your skills in communicating with the computer.\nWhat is your solution? "
     right_answer= "In fact, you are a genius person, as you were able to solve this puzzle. Luckily,\nthere was a good wizard behind the puzzle, \nwho congratulates you on your intelligence \nand offers you to take either (a powerful magic wand or a Zosar-sw.)\n You need to think properly in order to make use of one of these weapons.\n What do you choose? \n1-Zosar-sword \n2-magic-wand"
     wrong_answer= "Unfortunately, you didn't think well about the riddle. \nWhat do you want?\n1-Do you want to try again?\n2-Do you want to go back to the room?"
@@ -102,7 +102,7 @@ def check_puzzle(evil):
         write_function(wrong_answer)
         ch6=choosing_function()
         if ch6==1:
-            check_puzzle()
+            check_puzzle(weapon,evil)
         else:
             go_room(weapon,evil)
         
